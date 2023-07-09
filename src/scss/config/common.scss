@@ -11,20 +11,12 @@
     &__left-block{
         width: 50%;
     }
-    &__right-block{
-        position: fixed;
-        right: 0;
-        width: 50%;
-        height: 100%;
-        border: 1px dotted gray;
-    }
-    &__chronos-line{
-        display: grid;
-        grid-template-columns: repeat(6, 2fr);
-        gap: 8px;
-    }
     &__chronos-item{
-        background-color: azure;
+        display: grid;
+        grid-template-columns: repeat(5, 2fr);
+        padding: 8px 0;
+    }
+    &__chronos-content{
         &_ruler{
             grid-column: 1 / 2;
         }
@@ -36,6 +28,29 @@
         }
         &_wars{
             grid-column: 5 / 6;
+            
         }
+    }
+    div[data-active='true'] {
+        background-color: indianred;
+    }
+    div[data-active='false'] {
+        background-color: #f0ffff;
+        transition-duration: .2s;
+        &:hover{
+            background-color: #e0e5e5;
+        }
+    }
+    &__discription{
+        position: fixed;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border: 1px dotted gray;
+    }
+    &__king-avatar{
+        width: 200px;
+        height: 200px;
+        object-fit: contain;
     }
 }
