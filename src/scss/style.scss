@@ -50,13 +50,5 @@
 @import 'components/footer';
 
 
-.filter{
-    display: flex;
-}
 
-div[data-tag]{
-    border: 1px dotted gray;
-    display: grid;
-    grid-template-columns: 1fr 11fr;
-    grid-template-rows: auto;
-}
+

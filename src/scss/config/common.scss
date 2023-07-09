@@ -1,1 +1,41 @@
 // Заголовки, общие БЄМ блоки и проче...
+
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    &__filter{
+        display: flex;
+        flex-direction: row;
+    }
+    &__left-block{
+        width: 50%;
+    }
+    &__right-block{
+        position: fixed;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        border: 1px dotted gray;
+    }
+    &__chronos-line{
+        display: grid;
+        grid-template-columns: repeat(6, 2fr);
+        gap: 8px;
+    }
+    &__chronos-item{
+        background-color: azure;
+        &_ruler{
+            grid-column: 1 / 2;
+        }
+        &_religion{
+            grid-column: 2 / 3;
+        }
+        &_science{
+            grid-column: 4 / 5;
+        }
+        &_wars{
+            grid-column: 5 / 6;
+        }
+    }
+}
